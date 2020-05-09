@@ -1,0 +1,73 @@
+SQL> select * from dba_role_privs where GRANTEE in ('MC93680','MC93273','MC93608','MC93678','MC93686','MC93604','MC93429','MC93343','MC93346','MC93443') order by GRANTEE;
+
+GRANTEE              GRANTED_ROLE         ADM DEL DEF COM
+-------------------- -------------------- --- --- --- ---
+MC93273              CONNECT              NO  NO  YES NO
+MC93273              PWRCTR_GRP_01        NO  NO  YES NO
+MC93273              CIS_GRP_10           NO  NO  YES NO
+MC93273              CRCMGR_GRP_01        NO  NO  YES NO
+MC93343              CIS_GRP_10           NO  NO  YES NO
+MC93343              CONNECT              NO  NO  YES NO
+MC93343              CRCMGR_GRP_01        NO  NO  YES NO
+MC93343              PWRCTR_GRP_01        NO  NO  YES NO
+MC93346              CONNECT              NO  NO  YES NO
+MC93346              PWRCTR_GRP_01        NO  NO  YES NO
+MC93346              CIS_GRP_10           NO  NO  YES NO
+MC93346              CRCMGR_GRP_01        NO  NO  YES NO
+MC93429              CIS_GRP_10           NO  NO  YES NO
+MC93429              PWRCTR_GRP_01        NO  NO  YES NO
+MC93429              CONNECT              NO  NO  YES NO
+MC93429              CRCMGR_GRP_01        NO  NO  YES NO
+MC93443              CONNECT              NO  NO  YES NO
+MC93443              CRCMGR_GRP_01        NO  NO  YES NO
+MC93443              PWRCTR_GRP_01        NO  NO  YES NO
+MC93443              CIS_GRP_10           NO  NO  YES NO
+MC93604              CIS_GRP_10           NO  NO  YES NO
+MC93604              CRCMGR_GRP_01        NO  NO  YES NO
+MC93604              CONNECT              NO  NO  YES NO
+MC93604              PWRCTR_GRP_01        NO  NO  YES NO
+MC93608              CRCMGR_GRP_01        NO  NO  YES NO
+MC93608              CIS_GRP_10           NO  NO  YES NO
+MC93608              CONNECT              NO  NO  YES NO
+MC93608              PWRCTR_GRP_01        NO  NO  YES NO
+MC93678              PWRCTR_GRP_01        NO  NO  YES NO
+MC93678              CRCMGR_GRP_01        NO  NO  YES NO
+MC93678              CONNECT              NO  NO  YES NO
+MC93678              CIS_GRP_10           NO  NO  YES NO
+MC93680              PWRCTR_GRP_01        NO  NO  YES NO
+MC93680              CONNECT              NO  NO  YES NO
+MC93680              CIS_GRP_10           NO  NO  YES NO
+MC93680              CRCMGR_GRP_01        NO  NO  YES NO
+MC93686              CRCMGR_GRP_01        NO  NO  YES NO
+MC93686              CIS_GRP_10           NO  NO  YES NO
+MC93686              CONNECT              NO  NO  YES NO
+MC93686              PWRCTR_GRP_01        NO  NO  YES NO
+
+40 rows selected.
+
+SQL> select USERNAME,ACCOUNT_STATUS,CREATED from dba_users where USERNAME in ('MC93680','MC93273','MC93608','MC93678','MC93686','MC93604','MC93429','MC93343','MC93346','MC93443');
+
+USERNAME   ACCOUNT_STATUS                   CREATED
+---------- -------------------------------- ---------
+MC93343    OPEN                             07-MAY-20
+MC93604    OPEN                             07-MAY-20
+MC93346    OPEN                             07-MAY-20
+MC93273    OPEN                             07-MAY-20
+MC93686    OPEN                             07-MAY-20
+MC93680    OPEN                             07-MAY-20
+MC93429    OPEN                             07-MAY-20
+MC93678    OPEN                             07-MAY-20
+MC93608    OPEN                             07-MAY-20
+MC93443    OPEN                             07-MAY-20
+
+10 rows selected.
+
+SQL> select name,open_mode from v$database;
+
+NAME      OPEN_MODE
+--------- --------------------
+PCIS      READ WRITE
+
+SQL> !hostname;date
+mcdeagsun112
+Friday, May  8, 2020 01:44:02 PM CDT
