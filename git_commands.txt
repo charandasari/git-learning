@@ -1,0 +1,50 @@
+git --help
+git config --global user.name "charandasari"
+git config --global user.email "charandasar@gmail.com"
+git init git-demo(Intializes a working dir for git) or git init
+pwd
+ls
+mate README.md(Creating a file)
+ls
+git status( gives info about whether it us staged or not)
+git add README.md(TO add to staging)
+git status( To see staged info)
+git commit -m "Initial commit"( To commit changes)
+clear
+git status(To see info)
+
+###############usage info####################################
+Charan.Teja@HYD1WCTEJA MINGW64 ~/git_projects/git-demo (master)
+$
+Charan.Teja@HYD1WCTEJA MINGW64 ~/git_projects/git-demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+Charan.Teja@HYD1WCTEJA MINGW64 ~/git_projects/git-demo (master)
+$ git commit "Initial Commit"
+error: pathspec 'Initial Commit' did not match any file(s) known to git
+
+Charan.Teja@HYD1WCTEJA MINGW64 ~/git_projects/git-demo (master)
+$
+
+Charan.Teja@HYD1WCTEJA MINGW64 ~/git_projects/git-demo (master)
+$ git commit -m "Initial Commit"
+[master (root-commit) 98eefe1] Initial Commit
+ 1 file changed, 3 insertions(+)
+ create mode 100644 README.md
+
+Charan.Teja@HYD1WCTEJA MINGW64 ~/git_projects/git-demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Charan.Teja@HYD1WCTEJA MINGW64 ~/git_projects/git-demo (master)
+
+################End of usage info##########################
